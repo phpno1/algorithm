@@ -1,9 +1,6 @@
 <?php
 /**
- * 等值线
- *
- * 如果存在相同字母则返回false
- * User: yangzuhao@zuoyebang.com
+ * User: @Yaha
  * Date: 2018/10/23
  * Time: 01:26
  */

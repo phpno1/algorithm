@@ -1,7 +1,7 @@
 <?php
 /**
  * 给定一个字符串返回字符串中最短的单词
- * User: yangzuhao@zuoyebang.com
+ * User: @Yaha
  * Date: 2018/10/23
  * Time: 23:33
  */
