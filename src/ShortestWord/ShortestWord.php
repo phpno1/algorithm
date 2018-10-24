@@ -8,11 +8,22 @@
 
 namespace Phpno1\Algorithm\ShortestWord;
 
+/**
+ * Class ShortestWord
+ *
+ * @package Phpno1\Algorithm\ShortestWord
+ */
 class ShortestWord
 {
 
+    /**
+     * @param $str
+     *
+     * @return mixed
+     */
     public function findShort($str)
     {
+        // 利用array_map取出每个字符串的长度
         return min(array_map('strlen', (explode(' ', $str))));
     }
 }
