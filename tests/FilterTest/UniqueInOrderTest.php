@@ -6,10 +6,10 @@
  * Time: 23:53
  */
 
-namespace Phpno1\Test\UniqueInOrder;
+namespace Phpno1\Test\FilterTest;
 
 
-use Phpno1\Algorithm\UniqueInOrder\UniqueInOrder;
+use Phpno1\Algorithm\Filter\UniqueInOrder;
 use PHPUnit\Framework\TestCase;
 
 class UniqueInOrderTest extends TestCase

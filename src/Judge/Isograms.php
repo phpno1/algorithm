@@ -8,7 +8,7 @@
  * Time: 01:26
  */
 
-namespace Phpno1\Algorithm\Isograms;
+namespace Phpno1\Algorithm\Judge;
 
 /**
  * 可简化为return count($array) === count(array_unique(str_split($array)))?true:false;

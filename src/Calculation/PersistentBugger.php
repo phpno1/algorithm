@@ -7,7 +7,7 @@
  * Time: 22:46
  */
 
-namespace Phpno1\Algorithm\PersistentBugger;
+namespace Phpno1\Algorithm\Calculation;
 
 
 /**

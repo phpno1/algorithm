@@ -6,7 +6,7 @@
  * Time: 22:36
  */
 
-namespace Phpno1\Algorithm\DontGiveMeFive;
+namespace Phpno1\Algorithm\Filter;
 
 /**
  * Class DontGiveMeFive

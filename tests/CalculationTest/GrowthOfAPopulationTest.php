@@ -8,9 +8,9 @@
  * Time: 00:07
  */
 
-namespace Phpno1\Test\GrowthOfAPopulationTest;
+namespace Phpno1\Test\CalculationTest;
 
-use Phpno1\Algorithm\GrowthOfAPopulation\GrowthOfAPopulation;
+use Phpno1\Algorithm\Calculation\GrowthOfAPopulation;
 use PHPUnit\Framework\TestCase;
 
 /**

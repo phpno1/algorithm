@@ -5,10 +5,10 @@
  * Time: 22:23
  */
 
-namespace Phpno1\Test\OddOrEven;
+namespace Phpno1\Test\FilterTest;
 
 use PHPUnit\Framework\TestCase;
-use Phpno1\Algorithm\OddOrEven\OddOrEven;
+use Phpno1\Algorithm\Filter\OddOrEven;
 
 class OddOrEverTest extends TestCase
 {

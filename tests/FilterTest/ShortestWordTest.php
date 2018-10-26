@@ -5,9 +5,9 @@
  * Time: 23:33
  */
 
-namespace Phpno1\Test\ShortestWord;
+namespace Phpno1\Test\FilterTest;
 
-use Phpno1\Algorithm\ShortestWord\ShortestWord;
+use Phpno1\Algorithm\Filter\ShortestWord;
 
 use PHPUnit\Framework\TestCase;
 

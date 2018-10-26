@@ -7,7 +7,7 @@
  * Time: 23:53
  */
 
-namespace Phpno1\Algorithm\UniqueInOrder;
+namespace Phpno1\Algorithm\Filter;
 
 
 /**

@@ -6,10 +6,10 @@
  * Time: 22:47
  */
 
-namespace Phpno1\Test\PersistentBuggerTest;
+namespace Phpno1\Test\CalculationTest;
 
 
-use Phpno1\Algorithm\PersistentBugger\PersistentBugger;
+use Phpno1\Algorithm\Calculation\PersistentBugger;
 use PHPUnit\Framework\TestCase;
 
 class PersistentBuggerTest extends TestCase

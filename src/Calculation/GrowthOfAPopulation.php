@@ -9,7 +9,7 @@
  * Time: 00:07
  */
 
-namespace Phpno1\Algorithm\GrowthOfAPopulation;
+namespace Phpno1\Algorithm\Calculation;
 
 /**
  * Class GrowthOfAPopulation

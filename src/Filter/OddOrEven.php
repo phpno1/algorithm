@@ -6,7 +6,7 @@
  * Time: 22:11
  */
 
-namespace Phpno1\Algorithm\OddOrEven;
+namespace Phpno1\Algorithm\Filter;
 
 /**
  * 可简化为return array_sum($a) % 2 ? 'odd' : 'even';

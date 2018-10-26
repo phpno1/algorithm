@@ -6,14 +6,16 @@
  * Time: 22:36
  */
 
-namespace Phpno1\Algorithm\DontGiveMeFive;
+namespace Phpno1\Test\FilterTest;
 
 use PHPUnit\Framework\TestCase;
-use Phpno1\Algorithm\DontGiveMeFive\DontGiveMeFive;
+use Phpno1\Algorithm\Filter\DontGiveMeFive;
 
 class DontGiveMeFiveTest extends TestCase
 {
-    public function testExamples() {
+
+    public function testExamples()
+    {
 
         $dontGiveMeFiveObject = new DontGiveMeFive();
 

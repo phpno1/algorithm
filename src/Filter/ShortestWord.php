@@ -6,7 +6,7 @@
  * Time: 23:33
  */
 
-namespace Phpno1\Algorithm\ShortestWord;
+namespace Phpno1\Algorithm\Filter;
 
 /**
  * Class ShortestWord
