@@ -32,6 +32,11 @@
 └── Judge				判断相关
     └── Isograms.php
 ```
+
 ## 测试
 
 `./vendor/bin/phpunit tests/Isograms/IsogramsTest.php`
+
+## 社交讨论群
+
+QQ群：680531281
