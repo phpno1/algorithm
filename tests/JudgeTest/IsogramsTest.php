@@ -5,9 +5,9 @@
  * Time: 01:26
  */
 
-namespace Phpno1\Test\Isograms;
+namespace Phpno1\Test\JudgeTest;
 
-use Phpno1\Algorithm\Isograms\Isograms;
+use Phpno1\Algorithm\Judge\Isograms;
 use PHPUnit\Framework\TestCase;
 
 class IsogramsTest extends TestCase
