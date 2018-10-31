@@ -13,7 +13,7 @@ class Interpreter
 
     public function interpreter(string $code, string $tape): string
     {
-        $tapeArray = str_split($tape);
+        //        $tapeArray = str_split($tape);
         $codeArray = str_split($code);
 
         $temp = 0;
@@ -21,18 +21,38 @@ class Interpreter
 
             switch ($codeArray[$i]) {
                 case '>':
-                    $temp++;
+                    $temp .= 0;
                     break;
                 case '<':
-                    $temp--;
+                    $temp .= 10;
                     break;
                 case '*':
-                    $tapeArray[$temp] = $tapeArray[$temp] === 1 ? 0 : 1;
+                    $temp .= 1;
                     break;
             }
         }
 
+        return $temp | $tape;
+        //        return implode('', $tapeArray);
+    }
 
-        return implode('', $tapeArray);
+    private function add($data)
+    {
+        $result = [];
+        foreach ($data as $key => $value) {
+            $result[$key++] = $value;
+        }
+
+        return $result;
+    }
+
+    private function reduce($data)
+    {
+        $result = [];
+        foreach ($data as $key => $value) {
+            $result[$key--] = $value;
+        }
+
+        return $result;
     }
 }
