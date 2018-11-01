@@ -1,9 +1,7 @@
 <?php
 
-namespace Phpno1\Algorithm\Filter;
+namespace Phpno1\Test\FilterTest;
 
-use RecursiveIteratorIterator;
-use RecursiveArrayIterator;
 use PHPUnit\Framework\TestCase;
 use Phpno1\Algorithm\Filter\ArrayPluck;
 
