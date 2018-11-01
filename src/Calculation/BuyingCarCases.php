@@ -25,30 +25,23 @@ class BuyingCarCases
             return [];
         }
 
-        $numberArray = $this->buildNumber($n);
-
         $tempArray = [];
 
         // 高斯定理
-        $sum       = ($n * ($n + 1)) / 2;
+        $sum = ($n * ($n + 1)) / 2;
 
-        foreach ($numberArray as $item) {
+        for ($sentryNum = 0; $sentryNum < $n; $sentryNum++) {
 
             // 因式分解
-            $sentryNum = ($sum - $item) / ($item + 1);
+            $temp = ($sum - $sentryNum) / ($sentryNum + 1);
 
             // 检查判断
-            if (is_int($sentryNum) && 1 <= $sentryNum && $n >= $sentryNum) {
-                $tempArray[] = [$item, $sentryNum];
+            if (is_int($temp) && 1 <= $temp && $n >= $temp) {
+                $tempArray[] = [$sentryNum, $temp];
             }
         }
 
         return $tempArray;
-    }
-
-    private function buildNumber($n)
-    {
-        return range(1, $n);
     }
 
     /**
@@ -64,7 +57,7 @@ class BuyingCarCases
             return [];
         }
 
-        $numberArray = $this->buildNumber($n);
+        $numberArray = range(1, $n);
 
         $tempArray = [];
         $sum       = ($n * ($n + 1)) / 2;
