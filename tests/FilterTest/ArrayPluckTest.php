@@ -7,12 +7,12 @@ use Phpno1\Algorithm\Filter\ArrayPluck;
 
 class ArrayPluckTest extends TestCase
 {
-    private $arrayPluck;
+    private $arrayPluckObject;
 
     public function setUp()
     {
         parent::setUp();
-        $this->arrayPluck = new ArrayPluck();
+        $this->arrayPluckObject = new ArrayPluck();
     }
 
 
@@ -24,17 +24,17 @@ class ArrayPluckTest extends TestCase
     {
 
         $this->assertEquals(
-            count($this->arrayPluck->arrayPluck([ [ '1' ] , [ '2' ] ])) ,
+            count($this->arrayPluckObject->arrayPluck([ [ '1' ] , [ '2' ] ])) ,
             2
         );
 
         $this->assertEquals(
-            count($this->arrayPluck->arrayPluck([ [ '1' ] , '2' ])) ,
+            count($this->arrayPluckObject->arrayPluck([ [ '1' ] , '2' ])) ,
             2
         );
 
         $this->assertEquals(
-            count($this->arrayPluck->arrayPluck(
+            count($this->arrayPluckObject->arrayPluck(
                 [
                     [ '1' ] ,
                     '2' ,
