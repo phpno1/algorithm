@@ -1,10 +1,10 @@
 <?php
+
 /**
- *  给定一个数字，每位相乘，最终乘到一位数返回相乘次数
+ * PHP version 7.0
  *
- * User: @yaha
- * Date: 2018/10/25
- * Time: 22:46
+ * @link        https://github.com/yahaphper
+ * @author      Yaha <1143990204@qq.com>
  */
 
 namespace Phpno1\Algorithm\Calculation;
@@ -13,7 +13,10 @@ namespace Phpno1\Algorithm\Calculation;
 /**
  * Class PersistentBugger
  *
+ * 给定一个数字，每位相乘，最终乘到一位数返回相乘次数
+ *
  * @package Phpno1\Algorithm\PersistentBugger
+ * @author  Yaha <1143990204@qq.com>
  */
 class PersistentBugger
 {
