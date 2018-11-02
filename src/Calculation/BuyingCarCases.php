@@ -43,36 +43,4 @@ class BuyingCarCases
 
         return $tempArray;
     }
-
-    /**
-     * 原写法
-     *
-     * @param $n
-     *
-     * @return array
-     */
-    private function oldRemoveNB($n)
-    {
-        if ($n < 1) {
-            return [];
-        }
-
-        $numberArray = range(1, $n);
-
-        $tempArray = [];
-        $sum       = ($n * ($n + 1)) / 2;
-
-        foreach ($numberArray as $index => $item) {
-
-            unset($numberArray[$index]);
-            foreach ($numberArray as $value) {
-                if ($value == (($sum - $item - $value) / $item)) {
-                    $tempArray[] = [$item, $value];
-                    $tempArray[] = [$value, $item];
-                }
-            }
-        }
-
-        return $tempArray;
-    }
 }
