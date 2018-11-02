@@ -1,9 +1,8 @@
 <?php
 /**
- * overviwe.
- * User: yangzuhao@zuoyebang.com
- * Date: 2018/10/31
- * Time: 10:40
+ * @package   Phpno1\Test\FilterTest
+ * @author    Yaha <1143990204@qq.com>
+ * @link      https://blog.flyaha.top
  */
 
 namespace Phpno1\Test\FilterTest;
@@ -12,20 +11,36 @@ namespace Phpno1\Test\FilterTest;
 use Phpno1\Algorithm\Filter\ValidIP;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class ValidIPTest
+ *
+ * @package       Phpno1\Test\FilterTest
+ *
+ * 单元测试
+ *
+ * @category
+ * @author        Yaha <1143990204@qq.com>
+ */
 class ValidIPTest extends TestCase
 {
 
+    /**
+     * @var object $validIPObject Phpno1\Algorithm\Filter\ValidIP
+     */
     private $validIPObject;
 
-    private function getValidIPObject()
+    /**
+     * 初始化object
+     */
+    public function setUp()
     {
-        if ($this->validIPObject) {
-            return $this->validIPObject;
-        }
-
-        return $this->validIPObject = new ValidIP();
+        parent::setUp();
+        $this->validIPObject = new ValidIP();
     }
 
+    /**
+     * 单元测试case 1
+     */
     public function testValid()
     {
         $valid = [
@@ -36,10 +51,13 @@ class ValidIPTest extends TestCase
         ];
 
         foreach ($valid as $input) {
-            $this->assertTrue($this->getValidIPObject()->isValidIP($input), "Failed asserting that '$input' is a valid IP4 address.");
+            $this->assertTrue($this->validIPObject->isValidIP($input), "Failed asserting that '$input' is a valid IP4 address.");
         }
     }
 
+    /**
+     * 单元测试case 2
+     */
     public function testInvalid()
     {
         $invalid = [
@@ -50,7 +68,7 @@ class ValidIPTest extends TestCase
         ];
 
         foreach ($invalid as $input) {
-            $this->assertFalse($this->getValidIPObject()->isValidIP($input), "Failed asserting that '$input' is an invalid IP4 address.");
+            $this->assertFalse($this->validIPObject->isValidIP($input), "Failed asserting that '$input' is an invalid IP4 address.");
         }
     }
 }

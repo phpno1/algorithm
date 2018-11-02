@@ -1,9 +1,8 @@
 <?php
 /**
- * @Yaha
- * User: yangzuhao@zuoyebang.com
- * Date: 2018/10/25
- * Time: 22:47
+ * @package   Phpno1\Test\CalculationTest
+ * @author    Yaha <1143990204@qq.com>
+ * @link      https://blog.flyaha.top
  */
 
 namespace Phpno1\Test\CalculationTest;
@@ -12,16 +11,42 @@ namespace Phpno1\Test\CalculationTest;
 use Phpno1\Algorithm\Calculation\PersistentBugger;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class PersistentBuggerTest
+ *
+ * @package       Phpno1\Test\CalculationTest
+ *
+ * 单元测试
+ *
+ * @category      test
+ * @author        Yaha <1143990204@qq.com>
+ */
 class PersistentBuggerTest extends TestCase
 {
 
+    /**
+     * @var object $persistentBuggerObject Phpno1\Algorithm\Calculation\PersistentBugge
+     */
+    private $persistentBuggerObject;
+
+    /**
+     * 初始化object
+     */
+    public function setUp()
+    {
+        parent::setUp();
+
+        $this->persistentBuggerObject = new PersistentBugger();
+    }
+
+    /**
+     * 单元测试case
+     */
     public function testDescriptionExamples()
     {
 
-        $persistentBuggerObject = new PersistentBugger();
-
-        $this->assertEquals(3, $persistentBuggerObject->persistence(39));
-        $this->assertEquals(4, $persistentBuggerObject->persistence(999));
-        $this->assertEquals(0, $persistentBuggerObject->persistence(4));
+        $this->assertEquals(3, $this->persistentBuggerObject->persistence(39));
+        $this->assertEquals(4, $this->persistentBuggerObject->persistence(999));
+        $this->assertEquals(0, $this->persistentBuggerObject->persistence(4));
     }
 }

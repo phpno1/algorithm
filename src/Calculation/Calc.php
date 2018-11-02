@@ -1,18 +1,28 @@
 <?php
 /**
- * 反向波兰表示法
- *
- * User: @yaha
- * Date: 2018/10/28
- * Time: 22:43
+ * @package    Phpno1\Algorithm\Calculation
+ * @author     Yaha <1143990204@qq.com>
+ * @link       https://blog.flyaha.top
  */
 
 namespace Phpno1\Algorithm\Calculation;
 
-
+/**
+ * Class Calc
+ *
+ * @package       Phpno1\Algorithm\Calculation
+ *
+ * 反向波兰表示法
+ *
+ * @category
+ * @author        Yaha <1143990204@qq.com>
+ */
 class Calc
 {
 
+    /**
+     * @var array $option 操作合集
+     */
     private $option
         = [
             '+' => 'add',
@@ -21,39 +31,66 @@ class Calc
             '/' => 'except',
         ];
 
+    /**
+     * @param string $expr 待转换的字符串
+     *
+     * @return float 计算结果
+     */
     public function calc(string $expr): float
     {
 
+        /**
+         * 为空不计算
+         */
         if (empty($expr)) {
             return 0;
         }
 
-        // 将字符串分割为数组
+        /**
+         * 将字符串分割为数组
+         */
         $array = explode(' ', $expr);
 
+        /**
+         * 初始化栈
+         */
         $stack = [];
 
-        // 遍历数组
+        /**
+         * 遍历数组
+         */
         foreach ($array as $be) {
-            // 检查是否是数字
+            /**
+             * 检查是否是数字
+             */
             if (is_numeric($be)) {
+                /**
+                 * 入栈
+                 */
                 $stack[] = $be;
             } else {
-                // 如果不是数字则出栈
+                /**
+                 * 如果不是数字则出栈
+                 */
                 $o2 = array_pop($stack);
                 $o1 = array_pop($stack);
 
-                // 判断操作类型
+                /**
+                 * 判断操作类型计算结果
+                 */
                 $stack[] = $this->{$this->option[$be]}($o1, $o2);
 
             }
         }
 
+        /**
+         * 出栈
+         */
         return array_pop($stack);
     }
 
     /**
-     * 加
+     * 加法计算
      *
      * @param $number1
      * @param $number2
@@ -66,7 +103,7 @@ class Calc
     }
 
     /**
-     * 减
+     * 减法计算
      *
      * @param $number1
      * @param $number2
@@ -79,7 +116,7 @@ class Calc
     }
 
     /**
-     * 乘
+     * 乘法计算
      *
      * @param $number1
      * @param $number2
@@ -92,7 +129,7 @@ class Calc
     }
 
     /**
-     * 除
+     * 除法计算
      *
      * @param $number1
      * @param $number2

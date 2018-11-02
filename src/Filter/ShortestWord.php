@@ -1,9 +1,8 @@
 <?php
 /**
- * 给定一个字符串返回字符串中最短的单词
- * User: @Yaha
- * Date: 2018/10/23
- * Time: 23:33
+ * @package    Phpno1\Algorithm\Filter
+ * @author     Yaha <1143990204@qq.com>
+ * @link       https://blog.flyaha.top
  */
 
 namespace Phpno1\Algorithm\Filter;
@@ -11,7 +10,12 @@ namespace Phpno1\Algorithm\Filter;
 /**
  * Class ShortestWord
  *
- * @package Phpno1\Algorithm\ShortestWord
+ * @package       Phpno1\Algorithm\Filter
+ *
+ * 给定一个字符串返回字符串中最短的单词
+ *
+ * @category
+ * @author        Yaha <1143990204@qq.com>
  */
 class ShortestWord
 {
@@ -23,7 +27,9 @@ class ShortestWord
      */
     public function findShort($str)
     {
-        // 利用array_map取出每个字符串的长度
+        /**
+         * 利用array_map取出每个字符串的长度
+         */
         return min(array_map('strlen', (explode(' ', $str))));
     }
 }

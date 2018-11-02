@@ -1,19 +1,21 @@
 <?php
 /**
- * 给定一个数组相加后的和是奇数还是偶数
- * User: @yaha
- * Date: 2018/10/24
- * Time: 22:11
+ * @package    Phpno1\Algorithm\Filter
+ * @author     Yaha <1143990204@qq.com>
+ * @link       https://blog.flyaha.top
  */
 
 namespace Phpno1\Algorithm\Filter;
 
 /**
- * 可简化为return array_sum($a) % 2 ? 'odd' : 'even';
- *
  * Class OddOrEven
  *
- * @package Phpno1\Algorithm\OddOrEven
+ * @package       Phpno1\Algorithm\Filter
+ *
+ * 给定一个数组相加后的和是奇数还是偶数
+ *
+ * @category
+ * @author        Yaha <1143990204@qq.com>
  */
 class OddOrEven
 {

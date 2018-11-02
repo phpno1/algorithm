@@ -1,17 +1,31 @@
 <?php
 /**
- * PHP实现BF解释器
- *
- * User: @yaha
- * Date: 2018/10/30
- * Time: 23:23
+ * @package    Phpno1\Algorithm\Calculation
+ * @author     Yaha <1143990204@qq.com>
+ * @link       https://blog.flyaha.top
  */
 
 namespace Phpno1\Algorithm\Calculation;
 
+/**
+ * Class Interpreter
+ *
+ * @package       Phpno1\Algorithm\Calculation
+ *
+ * PHP实现BF解释器
+ *
+ * @category
+ * @author        Yaha <1143990204@qq.com>
+ */
 class Interpreter
 {
 
+    /**
+     * @param string $code
+     * @param string $tape
+     *
+     * @return string
+     */
     public function interpreter(string $code, string $tape): string
     {
         //        $tapeArray = str_split($tape);
@@ -37,6 +51,11 @@ class Interpreter
         //        return implode('', $tapeArray);
     }
 
+    /**
+     * @param $data
+     *
+     * @return array
+     */
     private function add($data)
     {
         $result = [];
@@ -47,6 +66,11 @@ class Interpreter
         return $result;
     }
 
+    /**
+     * @param $data
+     *
+     * @return array
+     */
     private function reduce($data)
     {
         $result = [];

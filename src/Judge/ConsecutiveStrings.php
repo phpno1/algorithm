@@ -1,5 +1,19 @@
 <?php
+
 /**
+ * @package    Phpno1\Algorithm\Judge
+ * @author     Yaha <1143990204@qq.com>
+ * @link       https://blog.flyaha.top
+ */
+
+namespace Phpno1\Algorithm\Judge;
+
+
+/**
+ * Class ConsecutiveStrings
+ *
+ * @package       Phpno1\Algorithm\Judge
+ *
  * You are given an array strarr of strings and an integer k.
  * Your task is to return the first longest string consisting
  * of k consecutive strings taken in the array.
@@ -9,17 +23,18 @@
  *
  * n being the length of the string array, if n = 0 or k > n or k <= 0 return "".
  *
- * User: @yaha
- * Date: 2018/10/26
- * Time: 23:56
+ * @category
+ * @author        Yaha <1143990204@qq.com>
  */
-
-namespace Phpno1\Algorithm\Judge;
-
-
 class ConsecutiveStrings
 {
 
+    /**
+     * @param $strArray
+     * @param $k
+     *
+     * @return string
+     */
     function longestConsec($strArray, $k)
     {
         // 计算数组的长度
