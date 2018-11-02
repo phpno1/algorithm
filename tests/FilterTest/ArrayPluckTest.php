@@ -5,7 +5,6 @@ namespace Phpno1\Test\FilterTest;
 use PHPUnit\Framework\TestCase;
 use Phpno1\Algorithm\Filter\ArrayPluck;
 
-
 class ArrayPluckTest extends TestCase
 {
     private $arrayPluck;
