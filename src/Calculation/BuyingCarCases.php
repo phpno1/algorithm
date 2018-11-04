@@ -30,34 +30,24 @@ class BuyingCarCases
     public function removeNb($n)
     {
 
-        /**
-         * 如果n小于1则不进行计算
-         */
+        // 如果n小于1则不进行计算
         if ($n < 1) {
             return [];
         }
 
-        /**
-         * 初始化结果集
-         */
+        // 初始化结果集
         $resultArray = [];
 
-        /**
-         * 利用高斯定理求和
-         */
+        // 利用高斯定理求和
         $sum = ($n * ($n + 1)) / 2;
 
-        /**
-         * 循环nc次找出b
-         */
+        // 循环nc次找出b
         for ($sentryNum = 0; $sentryNum < $n; $sentryNum++) {
 
-            /**
-             * 因式分解：sum-a-b = a*b
-             */
+            // 因式分解：sum-a-b = a*b
             $temp = ($sum - $sentryNum) / ($sentryNum + 1);
 
-            /**
+            /*
              * 1、是否是整数
              * 2、是否在n的范围中
              */

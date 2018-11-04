@@ -28,7 +28,6 @@ class Interpreter
      */
     public function interpreter(string $code, string $tape): string
     {
-        //        $tapeArray = str_split($tape);
         $codeArray = str_split($code);
 
         $temp = 0;

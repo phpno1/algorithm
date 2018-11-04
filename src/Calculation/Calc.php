@@ -39,63 +39,44 @@ class Calc
     public function calc(string $expr): float
     {
 
-        /**
-         * 为空不计算
-         */
+        // 为空不计算
         if (empty($expr)) {
             return 0;
         }
 
-        /**
-         * 将字符串分割为数组
-         */
+        // 将字符串分割为数组
         $array = explode(' ', $expr);
 
-        /**
-         * 初始化栈
-         */
+        // 初始化栈
         $stack = [];
 
-        /**
-         * 遍历数组
-         */
+        // 遍历数组
         foreach ($array as $be) {
-            /**
-             * 检查是否是数字
-             */
+
             if (is_numeric($be)) {
-                /**
-                 * 入栈
-                 */
+                // 入栈
                 $stack[] = $be;
             } else {
-                /**
-                 * 如果不是数字则出栈
-                 */
+                // 如果不是数字则出栈
                 $o2 = array_pop($stack);
                 $o1 = array_pop($stack);
 
-                /**
-                 * 判断操作类型计算结果
-                 */
+                // 判断操作类型计算结果
                 $stack[] = $this->{$this->option[$be]}($o1, $o2);
 
             }
         }
 
-        /**
-         * 出栈
-         */
         return array_pop($stack);
     }
 
     /**
      * 加法计算
      *
-     * @param $number1
-     * @param $number2
+     * @param float $number1
+     * @param float $number2
      *
-     * @return mixed
+     * @return float
      */
     private function add($number1, $number2)
     {
@@ -105,10 +86,10 @@ class Calc
     /**
      * 减法计算
      *
-     * @param $number1
-     * @param $number2
+     * @param float $number1
+     * @param float $number2
      *
-     * @return mixed
+     * @return float
      */
     private function reduce($number1, $number2)
     {
@@ -118,10 +99,10 @@ class Calc
     /**
      * 乘法计算
      *
-     * @param $number1
-     * @param $number2
+     * @param float $number1
+     * @param float $number2
      *
-     * @return float|int
+     * @return float
      */
     private function ride($number1, $number2)
     {
@@ -131,10 +112,10 @@ class Calc
     /**
      * 除法计算
      *
-     * @param $number1
-     * @param $number2
+     * @param float $number1
+     * @param float $number2
      *
-     * @return float|int
+     * @return float
      */
     private function except($number1, $number2)
     {
