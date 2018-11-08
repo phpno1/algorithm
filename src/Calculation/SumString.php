@@ -22,13 +22,14 @@ class SumString
 {
 
     /**
-     * @param $a
-     * @param $b
+     * @param string $a
+     * @param string $b
      *
      * @return float|int
      */
     public function sumString($a, $b)
     {
+        // 使用该方式相加防止超长数据相加导致溢出而精度遗失
         return array_sum(array($a,$b));
     }
 }
