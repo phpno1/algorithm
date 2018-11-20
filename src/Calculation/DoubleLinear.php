@@ -1,8 +1,8 @@
 <?php
 /**
- * @package   Phpno1\Algorithm\Calculation
- * @author    Yaha <1143990204@qq.com>
- * @link      https://blog.flyaha.top
+ * @package    Phpno1\Algorithm\ArrayPluck
+ * @author     ice <354037968@@qq.com>
+ * @link       https://github.com/yb19890724
  */
 
 namespace Phpno1\Algorithm\Calculation;
