@@ -16,12 +16,18 @@ class DoubleLinear
 
         $i = 0;
         while ($i <= $n) {
-            $array[] = (2 * $array[$i]) + 1;
-            $array[] = (3 * $array[$i]) + 1;
+            $a = (2 * $array[$i]) + 1;
+            $b = (3 * $array[$i]) + 1;
+            if ( ! in_array($a, $array)) {
+                $array[] = $a;
+            }
+            if ( ! in_array($b, $array)) {
+                $array[] = $b;
+            }
             sort($array);
             $i++;
         }
-        echo implode(',',$array).PHP_EOL;
+
         return $array[$n];
     }
 }
