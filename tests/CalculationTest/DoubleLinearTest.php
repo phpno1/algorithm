@@ -30,5 +30,6 @@ class DoubleLinearTest extends TestCase
         $this->revTest($this->doubleLinearObject->dblLinear(30), 91);
         $this->revTest($this->doubleLinearObject->dblLinear(50), 175);
         $this->revTest($this->doubleLinearObject->dblLinear(100), 447);
+        $this->revTest($this->doubleLinearObject->dblLinear(1000000), 54381286);
     }
 }

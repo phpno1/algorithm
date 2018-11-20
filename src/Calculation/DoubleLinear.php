@@ -12,22 +12,26 @@ class DoubleLinear
 
     public function dblLinear($n)
     {
-        $array[] = 1;
 
-        $i = 0;
-        while ($i <= $n) {
-            $a = (2 * $array[$i]) + 1;
-            $b = (3 * $array[$i]) + 1;
-            if ( ! in_array($a, $array)) {
-                $array[] = $a;
+        $u = [1];
+        $x = 0;
+        $y = 0;
+        for ($i = 0; $i < $n; $i++) {
+
+            $nextX = 2 * $u[$x] + 1;
+            $nextY = 3 * $u[$y] + 1;
+            if ($nextX <= $nextY) {
+                $u[] = $nextX;
+                $x++;
+                if ($nextX == $nextY) {
+                    $y++;
+                }
+            } else {
+                $u[] = $nextY;
+                $y++;
             }
-            if ( ! in_array($b, $array)) {
-                $array[] = $b;
-            }
-            sort($array);
-            $i++;
         }
 
-        return $array[$n];
+        return $u[$n];
     }
 }
