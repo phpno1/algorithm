@@ -7,9 +7,25 @@
 
 namespace Phpno1\Algorithm\Calculation;
 
+/**
+ * Class DoubleLinear
+ *
+ * @package       Phpno1\Algorithm\Calculation
+ *
+ * 双线性
+ *
+ * @link          https://www.codewars.com/kata/twice-linear/php
+ * @category
+ * @author        Yaha <1143990204@qq.com>
+ */
 class DoubleLinear
 {
 
+    /**
+     * @param $n
+     *
+     * @return mixed
+     */
     public function dblLinear($n)
     {
 
