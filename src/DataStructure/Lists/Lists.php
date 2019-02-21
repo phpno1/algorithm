@@ -18,7 +18,7 @@ namespace Phpno1\Algorithm\DataStructure\Lists;
  * @category
  * @author        Yaha <1143990204@qq.com>
  */
-class ListsInit
+class Lists
 {
 
     /**
