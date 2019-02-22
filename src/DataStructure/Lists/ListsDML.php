@@ -20,13 +20,22 @@ namespace Phpno1\Algorithm\DataStructure\Lists;
 class ListsDML
 {
 
+    public $lists;
+    public $listsDDL;
+
+    public function __construct(Lists $lists, ListsDDL $listsDDL)
+    {
+        $this->lists    = $lists;
+        $this->listsDDL = $listsDDL;
+    }
+
     /**
      * 清空顺序表
      */
-    public static function clearLists()
+    public function clearLists()
     {
-        Lists::$list   = null;
-        Lists::$length = 0;
+        $this->lists->setList([]);
+        $this->lists->setLength(0);
     }
 
     /**
@@ -37,26 +46,26 @@ class ListsDML
      *
      * @return bool
      */
-    public static function insert(int $elem, int $index = -1)
+    public function insert(int $elem, int $index = -1)
     {
-        if ($index >= Lists::$length || $index < 0) {
-            Lists::$list[Lists::$length] = $elem;
-            Lists::$length++;
+        if ($index >= $this->lists->length || $index < 0) {
+            $this->lists->list[$this->lists->length] = $elem;
+            $this->lists->length++;
 
             return true;
         }
 
         $countLoop = 0;
-        while ($countLoop <= Lists::$length) {
+        while ($countLoop <= $this->lists->length) {
             if ($countLoop >= $index) {
-                $tempValue               = Lists::$list[$countLoop];
-                Lists::$list[$countLoop] = $elem;
-                $elem                    = $tempValue;
+                $tempValue                     = $this->lists->list[$countLoop];
+                $this->lists->list[$countLoop] = $elem;
+                $elem                          = $tempValue;
             }
             $countLoop++;
         }
 
-        Lists::$length++;
+        $this->lists->length++;
 
         return true;
     }
@@ -68,9 +77,9 @@ class ListsDML
      *
      * @return bool
      */
-    public static function deleteToIndex(int $index)
+    public function deleteToIndex(int $index)
     {
-        if (! ListsDDL::findElem($index)) {
+        if (! $this->listsDDL->findElem($index)) {
             return false;
         }
 
@@ -78,9 +87,9 @@ class ListsDML
 
         $countLoop = 0;
         $countList = 0;
-        while ($countLoop < Lists::$length) {
+        while ($countLoop < $this->lists->length) {
             if ($index != $countLoop) {
-                $newLists[] = Lists::$list[$countLoop];
+                $newLists[] = $this->lists->list[$countLoop];
                 $countList++;
             }
 
@@ -91,8 +100,8 @@ class ListsDML
             $countLoop++;
         }
 
-        Lists::setList($newLists);
-        Lists::setLength($countList);
+        $this->lists->setList($newLists);
+        $this->lists->setLength($countList);
 
         return true;
     }
@@ -104,9 +113,9 @@ class ListsDML
      *
      * @return bool
      */
-    public static function deleteToElem(int $elem)
+    public function deleteToElem(int $elem)
     {
-        if (! ListsDDL::findIndexForInt($elem)) {
+        if (! $this->listsDDL->findIndexForInt($elem)) {
             return false;
         }
 
@@ -114,46 +123,46 @@ class ListsDML
 
         $countLoop = 0;
         $countList = 0;
-        while ($countLoop < Lists::$length) {
-            if ($elem != Lists::$list[$countLoop]) {
-                $newLists[] = Lists::$list[$countLoop];
+        while ($countLoop < $this->lists->length) {
+            if ($elem != $this->lists->list[$countLoop]) {
+                $newLists[] = $this->lists->list[$countLoop];
                 $countList++;
             }
 
             //            if ($index <= $countLoop) {
-            //                self::$list[$countLoop] = self::$list[$countLoop + 1];
+            //                Lists::$list[$countLoop] = Lists::$list[$countLoop + 1];
             //            }
 
             $countLoop++;
         }
 
-        Lists::setList($newLists);
-        Lists::setLength($countList);
+        $this->lists->setList($newLists);
+        $this->lists->setLength($countList);
 
         return true;
     }
 
-    public static function editToIndex(int $index, int $elem)
+    public function editToIndex(int $index, int $elem)
     {
-        if (! ListsDDL::findElem($index)) {
+        if (! $this->listsDDL->findElem($index)) {
             return false;
         }
 
-        Lists::$list[$index] = $elem;
+        $this->lists->list[$index] = $elem;
 
         return true;
     }
 
-    public static function editToElem(int $oldElem, int $newElem)
+    public function editToElem(int $oldElem, int $newElem)
     {
-        if (! ListsDDL::findIndexForInt($oldElem)) {
+        if (! $this->listsDDL->findIndexForInt($oldElem)) {
             return false;
         }
 
         $countLoop = 0;
-        while ($countLoop < Lists::$length) {
-            if ($oldElem === Lists::$list[$countLoop]) {
-                Lists::$list[$countLoop] = $newElem;
+        while ($countLoop < $this->lists->length) {
+            if ($oldElem === $this->lists->list[$countLoop]) {
+                $this->lists->list[$countLoop] = $newElem;
 
                 return true;
             }

@@ -24,19 +24,19 @@ class Lists
     /**
      * @var array  数据
      */
-    public static $list;
+    public $list;
     /**
      * @var int  长度
      */
-    public static $length;
+    public $length;
 
     /**
      * Init constructor.
      */
     public function __construct()
     {
-        self::$list   = [];
-        self::$length = 0;
+        $this->list   = [];
+        $this->length = 0;
     }
 
     /**
@@ -44,8 +44,8 @@ class Lists
      */
     public function __destruct()
     {
-        self::$list   = [];
-        self::$length = 0;
+        $this->list   = [];
+        $this->length = 0;
     }
 
     /**
@@ -53,9 +53,9 @@ class Lists
      *
      * @param array $list
      */
-    public static function setList(array $list)
+    public function setList(array $list)
     {
-        self::$list = $list;
+        $this->list = $list;
     }
 
     /**
@@ -63,8 +63,8 @@ class Lists
      *
      * @param int $length
      */
-    public static function setLength(int $length)
+    public function setLength(int $length)
     {
-        self::$length = $length;
+        $this->length = $length;
     }
 }

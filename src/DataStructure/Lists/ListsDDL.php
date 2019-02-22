@@ -20,14 +20,21 @@ namespace Phpno1\Algorithm\DataStructure\Lists;
 class ListsDDL
 {
 
+    public $lists;
+
+    public function __construct(Lists $lists)
+    {
+        $this->lists = $lists;
+    }
+
     /**
      * 获取顺序表长度
      *
      * @return int
      */
-    public static function lengthLists()
+    public function lengthLists()
     {
-        return Lists::$length;
+        return $this->lists->length;
     }
 
     /**
@@ -35,9 +42,9 @@ class ListsDDL
      *
      * @return bool
      */
-    public static function emptyLists()
+    public function emptyLists()
     {
-        if (Lists::$length === 0) {
+        if ($this->lists->length === 0) {
             return true;
         }
 
@@ -51,17 +58,17 @@ class ListsDDL
      *
      * @return null|integer
      */
-    public static function findElem(int $index)
+    public function findElem(int $index)
     {
-        if (self::emptyLists()) {
+        if ($this->emptyLists()) {
             return null;
         }
 
-        if ($index > Lists::$length || $index < 0) {
+        if ($index > $this->lists->length || $index < 0) {
             return null;
         }
 
-        return Lists::$list[$index];
+        return $this->lists->list[$index];
     }
 
     /**
@@ -71,16 +78,16 @@ class ListsDDL
      *
      * @return null|int
      */
-    public static function findIndexForInt(int $elem)
+    public function findIndexForInt(int $elem)
     {
-        if (self::emptyLists()) {
+        if ($this->emptyLists()) {
             return null;
         }
 
         $countLoop = 0;
-        while ($countLoop < Lists::$length) {
+        while ($countLoop < $this->lists->length) {
 
-            if (Lists::$list[$countLoop] === $elem) {
+            if ($this->lists->list[$countLoop] === $elem) {
                 return $countLoop;
             }
 
@@ -95,9 +102,9 @@ class ListsDDL
      *
      * @return string
      */
-    public static function traversing()
+    public function traversing()
     {
-        if (self::emptyLists()) {
+        if ($this->emptyLists()) {
             echo '[]';
             exit();
         }
@@ -105,10 +112,10 @@ class ListsDDL
         $string = "[";
 
         $countLoop = 0;
-        while ($countLoop < Lists::$length) {
+        while ($countLoop < $this->lists->length) {
 
-            $string .= Lists::$list[$countLoop];
-            $string .= $countLoop < Lists::$length - 1 ? ',' : ']';
+            $string .= $this->lists->list[$countLoop];
+            $string .= $countLoop < $this->lists->length - 1 ? ',' : ']';
 
             $countLoop++;
         }
