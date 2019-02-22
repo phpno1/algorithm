@@ -83,25 +83,17 @@ class ListsDML
             return false;
         }
 
-        $newLists = [];
-
         $countLoop = 0;
-        $countList = 0;
-        while ($countLoop < $this->lists->length) {
-            if ($index != $countLoop) {
-                $newLists[] = $this->lists->list[$countLoop];
-                $countList++;
-            }
 
-            //            if ($index <= $countLoop) {
-            //                self::$list[$countLoop] = self::$list[$countLoop + 1];
-            //            }
+        while ($countLoop < $this->lists->length) {
+            if ($index <= $countLoop) {
+                $this->lists->list[$countLoop] = $this->lists->list[$countLoop + 1];
+            }
 
             $countLoop++;
         }
 
-        $this->lists->setList($newLists);
-        $this->lists->setLength($countList);
+        $this->lists->setLength(--$this->lists->length);
 
         return true;
     }
