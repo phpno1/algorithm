@@ -117,4 +117,18 @@ class ListsTest extends TestCase
         $this->assertEquals([4, 5, 3], Lists::$list);
         $this->assertEquals(3, Lists::$length);
     }
+
+    /**
+     * @test
+     */
+    public function edit_elem()
+    {
+        $this->assertTrue(ListsDML::editToElem(2, 5));
+        $this->assertEquals([1, 5, 4, 5, 3], Lists::$list);
+
+        $this->assertFalse(ListsDML::editToElem(100, 13));
+
+        $this->assertTrue(ListsDML::editToIndex(0, 10));
+        $this->assertEquals([10, 5, 4, 5, 3], Lists::$list);
+    }
 }

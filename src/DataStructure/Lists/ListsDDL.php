@@ -17,13 +17,8 @@ namespace Phpno1\Algorithm\DataStructure\Lists;
  * @category
  * @author        Yaha <1143990204@qq.com>
  */
-class ListsDDL extends Lists
+class ListsDDL
 {
-
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
     /**
      * 获取顺序表长度
@@ -32,7 +27,7 @@ class ListsDDL extends Lists
      */
     public static function lengthLists()
     {
-        return self::$length;
+        return Lists::$length;
     }
 
     /**
@@ -42,7 +37,7 @@ class ListsDDL extends Lists
      */
     public static function emptyLists()
     {
-        if (self::$length === 0) {
+        if (Lists::$length === 0) {
             return true;
         }
 
@@ -62,11 +57,11 @@ class ListsDDL extends Lists
             return null;
         }
 
-        if ($index > self::$length || $index < 0) {
+        if ($index > Lists::$length || $index < 0) {
             return null;
         }
 
-        return self::$list[$index];
+        return Lists::$list[$index];
     }
 
     /**
@@ -83,9 +78,9 @@ class ListsDDL extends Lists
         }
 
         $countLoop = 0;
-        while ($countLoop < self::$length) {
+        while ($countLoop < Lists::$length) {
 
-            if (self::$list[$countLoop] === $elem) {
+            if (Lists::$list[$countLoop] === $elem) {
                 return $countLoop;
             }
 
@@ -110,10 +105,10 @@ class ListsDDL extends Lists
         $string = "[";
 
         $countLoop = 0;
-        while ($countLoop < self::$length) {
+        while ($countLoop < Lists::$length) {
 
-            $string .= self::$list[$countLoop];
-            $string .= $countLoop < self::$length - 1 ? ',' : ']';
+            $string .= Lists::$list[$countLoop];
+            $string .= $countLoop < Lists::$length - 1 ? ',' : ']';
 
             $countLoop++;
         }
