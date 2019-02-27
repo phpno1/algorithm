@@ -5,7 +5,7 @@
  * @link      https://blog.flyaha.top
  */
 
-namespace Phpno1\Algorithm\DataStructure\Lists;
+namespace Phpno1\Algorithm\DataStructure;
 
 use Phpno1\Algorithm\DataStructure\Base\Node;
 
@@ -19,7 +19,7 @@ use Phpno1\Algorithm\DataStructure\Base\Node;
  * @category
  * @author        Yaha <1143990204@qq.com>
  */
-class Lists implements Iterables
+class Lists
 {
 
     /**
@@ -36,21 +36,13 @@ class Lists implements Iterables
     /**
      * 初始化链表
      *
-     * @return bool
+     * Lists constructor.
      */
-    public function init(): bool
+    public function __construct()
     {
-        $this->first = new Node();
+        $this->first = [];
 
-        if ($this->first === null) {
-            return false;
-        }
-
-        $this->first->data = null;
-        $this->first->next = null;
-        $this->length      = 0;
-
-        return true;
+        $this->length = 0;
     }
 
     /**

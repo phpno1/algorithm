@@ -9,7 +9,8 @@ namespace Phpno1\Test\DataStructure;
 
 
 use Phpno1\Algorithm\DataStructure\Base\Node;
-use Phpno1\Algorithm\DataStructure\Lists\Lists;
+use Phpno1\Algorithm\DataStructure\Lists;
+use Phpno1\Algorithm\DataStructure\ListsDML;
 use PHPUnit\Framework\TestCase;
 
 class ListsTest extends TestCase
@@ -36,8 +37,6 @@ class ListsTest extends TestCase
 
         $listsObj = new Lists();
 
-        $listsObj->init();
-
         $n = 0;
         while ($n < 10) {
             $nodeData       = new Node();
@@ -46,8 +45,23 @@ class ListsTest extends TestCase
             $listsObj->add($nodeData);
             $n++;
         }
+        $listsDMLObj = new ListsDML($listsObj);
 
-
-        var_dump($listsObj);
+//        var_dump($listsDMLObj->current());
+//        var_dump($listsDMLObj->key());
+        $listsDMLObj->next();
+        var_dump($listsDMLObj->current());
+        $listsDMLObj->next();
+        $listsDMLObj->next();
+        $listsDMLObj->next();
+        $listsDMLObj->next();
+        $listsDMLObj->next();
+        $listsDMLObj->next();
+        $listsDMLObj->rewind();
+        $listsDMLObj->next();
+        $listsDMLObj->next();
+        $listsDMLObj->next();
+        $listsDMLObj->next();
+        var_dump($listsDMLObj->current(),$listsDMLObj->key());
     }
 }
