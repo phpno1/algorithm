@@ -8,9 +8,9 @@
 namespace Phpno1\Algorithm\DataStructure\Base;
 
 /**
- * Class Lists
+ * Class Node
  *
- * 定义数据格式
+ * 定义Node
  *
  * @category
  * @author        Yaha <1143990204@qq.com>
@@ -19,23 +19,12 @@ class Node
 {
 
     /**
-     * @var string|int|float|double $data 数据
+     * @var mixed $item 数据
      */
-    public $data;
+    public $item;
 
     /**
-     * @var int $next 后继
+     * @var Node $next 节点
      */
     public $next;
-
-    /**
-     * 初始化基础数据
-     *
-     * Node constructor.
-     */
-    public function __construct()
-    {
-        $this->data   = null;
-        $this->next   = null;
-    }
 }
