@@ -7,9 +7,7 @@
 
 namespace Phpno1\Test\DataStructure;
 
-
-use Phpno1\Algorithm\DataStructure\Base\Node;
-use Phpno1\Algorithm\DataStructure\Stack;
+use Phpno1\Algorithm\DataStructure\Base\Stack;
 use PHPUnit\Framework\TestCase;
 
 class StackTest extends TestCase

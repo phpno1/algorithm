@@ -8,7 +8,7 @@
 namespace Phpno1\Test\DataStructure;
 
 
-use Phpno1\Algorithm\DataStructure\Queue;
+use Phpno1\Algorithm\DataStructure\Base\Queue;
 use PHPUnit\Framework\TestCase;
 
 class QueueTest extends TestCase

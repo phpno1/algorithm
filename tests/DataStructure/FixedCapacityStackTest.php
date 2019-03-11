@@ -8,7 +8,7 @@
 namespace Phpno1\Test\DataStructure;
 
 
-use Phpno1\Algorithm\DataStructure\FixedCapacityStack;
+use Phpno1\Algorithm\DataStructure\Base\FixedCapacityStack;
 use PHPUnit\Framework\TestCase;
 
 class FixedCapacityStackTest extends TestCase
